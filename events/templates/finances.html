@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Finances{% endblock %}
+
+{% block content %}
+    <div class="content-container">
+        <h1>Contribution Payments</h1>
+
+        <div class="contribution-section">
+            <h2>Semester Contribution</h2>
+            <form id="semesterForm" class="payment-form">
+                {% csrf_token %}
+                <label for="semesterTill">Till Number:</label>
+                <input type="text" id="semesterTill" name="till_number" value="780981" readonly>
+                <label for="semesterPhone">Phone Number:</label>
+                <input type="text" id="semesterPhone" name="phone_number" required>
+                <label for="semesterAmount">Amount:</label>
+                <input type="number" id="semesterAmount" name="amount" required>
+                <button type="button" class="pay-btn" onclick="initiatePayment('semesterForm')">Pay Now</button>
+            </form>
+        </div>
+
+        <div class="contribution-section">
+            <h2>Ramadhan Contribution</h2>
+            <form id="ramadhanForm" class="payment-form">
+                {% csrf_token %}
+                <label for="ramadhanTill">Till Number:</label>
+                <input type="text" id="ramadhanTill" name="till_number" value="780981" readonly>
+                <label for="ramadhanPhone">Phone Number:</label>
+                <input type="text" id="ramadhanPhone" name="phone_number" required>
+                <label for="ramadhanAmount">Amount:</label>
+                <input type="number" id="ramadhanAmount" name="amount" required>
+                <button type="button" class="pay-btn" onclick="initiatePayment('ramadhanForm')">Pay Now</button>
+            </form>
+        </div>
+
+        <div class="contribution-section">
+            <h2>Masjid Salaam Project</h2>
+            <form id="masjidForm" class="payment-form">
+                {% csrf_token %}
+                <label for="masjidTill">Till Number:</label>
+                <input type="text" id="masjidTill" name="till_number" value="780981" readonly>
+                <label for="masjidPhone">Phone Number:</label>
+                <input type="text" id="masjidPhone" name="phone_number" required>
+                <label for="masjidAmount">Amount:</label>
+                <input type="number" id="masjidAmount" name="amount" required>
+                <button type="button" class="pay-btn" onclick="initiatePayment('masjidForm')">Pay Now</button>
+            </form>
+        </div>
+
+        <div class="contribution-section">
+            <h2>Orphanage Contribution</h2>
+            <form id="orphanageForm" class="payment-form">
+                {% csrf_token %}
+                <label for="orphanageTill">Till Number:</label>
+                <input type="text" id="orphanageTill" name="till_number" value="780981" readonly>
+                <label for="orphanagePhone">Phone Number:</label>
+                <input type="text" id="orphanagePhone" name="phone_number" required>
+                <label for="orphanageAmount">Amount:</label>
+                <input type="number" id="orphanageAmount" name="amount" required>
+                <button type="button" class="pay-btn" onclick="initiatePayment('orphanageForm')">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function initiatePayment(formId) {
+            var form = document.getElementById(formId);
+            var formData = new FormData(form);
+            
+            var jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+            
+            fetch('/events/initiate_stk_push/', {
+                method: 'POST',
+                body: JSON.stringify(jsonData),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Payment initiated successfully!');
+                    form.reset();
+                } else {
+                    alert('Failed to initiate payment: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to initiate payment');
+            });
+        }
+    </script>
+{% endblock %}

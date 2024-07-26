@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analytics</title>
+</head>
+<body>
+    <h1>User Login Counts</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Login Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for login_count in user_login_counts %}
+            <tr>
+                <td>{{ login_count.user.username }}</td>
+                <td>{{ login_count.login_time }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">No user login counts available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
