@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executives</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .executive {
+            margin: 20px;
+        }
+
+        .executive img {
+            border-radius: 0;
+            width: 220px;
+            height: 220px;
+        }
+
+        .executive p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .executive-row {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        
+        .executive p.title {
+            font-weight: bold; 
+            margin-bottom: 5px; 
+        }
+
+        
+        .executive p.name {
+            margin-top: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Executives </h1>
+    <div class="container">
+        <div class="executive">
+            <a href="#">
+                <img src="{% static 'images/executive1.jpg' %}" alt="Chairman">
+                <p class="title">Chairman</p>
+                <p class="name">Athman Yusuf</p>
+            </a>
+        </div>
+        <div class="executive">
+            <div class="executive-row">
+                <div class="executive">
+                    <a href="#">
+                        <img src="{% static 'images/executive2.jpg' %}" alt="Assistant Chairman">
+                        <p class="title">Assistant Chairman</p>
+                        <p>Adil Mwahanje</p>
+                    </a>
+                </div>
+                <div class="executive">
+                    <a href="#">
+                        <img src="{% static 'images/executive4.jpg' %}" alt="Treasurer">
+                        <p class="title">Treasurer</p>
+                        <p>Ahmed Majid</p>
+                    </a>
+                </div>
+                <div class="executive">
+                    <a href="#">
+                        <img src="{% static 'images/executive3.jpg' %}" alt="Secretary">
+                        <p class="title">Secretary</p>
+                        <p>Mohammed Abajila</p>
+                    </a>
+                </div>
+            </div>
+            <div class="executive-row">
+                <div class="executive">
+                    <a href="#">
+                        <img src="{% static 'images/executive5.jpg' %}" alt="Organising Secretary">
+                        <p class="title">Organising Secretary</p>
+                        <p>Shawwal Makokha</p>
+                    </a>
+                </div>
+                <div class="executive">
+                    <a href="#">
+                        <img src="{% static 'images/executive6.jpg' %}" alt="Interfaith">
+                        <p class="title">Interfaith</p>
+                        <p>Ali Hashim</p>
+                    </a>
+                </div>
+                <div class="executive">
+                    <a href="#">
+                        <img src="{% static 'images/executive7.jpg' %}" alt="Imam">
+                        <p class="title">Imam</p>
+                        <p>Abdulrahman Yusuf</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

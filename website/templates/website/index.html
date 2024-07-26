@@ -1,0 +1,281 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="masjid-salaam-section">
+    <div class="masjid-salaam-content text-center mt-4">
+        <h2 class="fw-bold">MASJID SALAAM PROJECT</h2>
+        <p class="lead">Our current major project focuses on constructing Masjid Salaam, a place for community gatherings and spiritual growth. Join us in our efforts to create a lasting impact.
+        The Masjid Salaam Project is dedicated to building a vibrant new mosque that will act as a cornerstone for community engagement and spiritual enrichment. The project envisions a state-of-the-art facility that will offer a range of services, including prayer spaces, educational programs, and social activities. It aims to provide a nurturing environment where community members can connect, learn, and grow together. By focusing on modern design and inclusive amenities, the Masjid Salaam will be a place where people of all ages and backgrounds can come together to strengthen their faith and build lasting bonds.</p>
+        <a href="#" class="btn btn-primary">Donate</a>
+    </div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/masjid1.jpg' %}" class="d-block w-300" alt="Masjid 1">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/masjid2.jpg' %}" class="d-block w-100" alt="Masjid 2">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/masjid3.jpg' %}" class="d-block w-100" alt="Masjid 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+<div class="section section-dark testimonials-section">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-4">TESTIMONIALS</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="testimonial">
+                    <img src="{% static 'images/image 60.jpg' %}" class="testimonial-img" alt="Fahim Omar">
+                    <p class="lead">"TTUMSA has provided me with a community and a sense of belonging that I cherish."</p>
+                    <p>- FAHIM OMAR</p>
+                    <p>- FORMER CHAIRMAN</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="testimonial">
+                    <img src="{% static 'images/image 55.jpg' %}" class="testimonial-img" alt="Lulu Salim">
+                    <p class="lead">"The events organized by TTUMSA are always enlightening and spiritually fulfilling."</p>
+                    <p>- LULU SALIM</p>
+                    <p>- CHAIRLADY</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="testimonial">
+                    <img src="{% static 'images/image 50.jpg' %}" class="testimonial-img" alt="Suleiman Shaffi">
+                    <p class="lead">"Being a part of TTUMSA has allowed me to grow both personally and spiritually."</p>
+                    <p>- SULEIMAN SHAFFI</p>
+                    <p>- MEMBER</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="events-section">
+    <div class="container">
+        <h2 class="text-center" style="color: black;">UPCOMING EVENTS</h2>
+        <div class="events-list">
+            <div class="event-item">
+                <span class="event-date">
+                    <span class="event-day">04</span>
+                    <span class="event-month">Jun</span>
+                    <span class="event-day-name">Wednesday</span>
+                </span>
+                <span class="event-details">
+                    <span class="event-title">Friday Prayer</span>
+                    <span class="event-info">
+                        <br/>
+                        <span class="event-time">Time: 1 pm - 2 pm </span>
+                        <br>
+                        <span class="event-venue">Location: Masjid Hamad ibn Juma</span>
+                        <br>
+                    </span>
+                </span>
+            </div>
+            <hr>
+            <div class="event-item">
+                <span class="event-date">
+                    <span class="event-day">12</span>
+                    <span class="event-month">Oct</span>
+                    <span class="event-day-name">Sunday</span>
+                </span>
+                <span class="event-details">
+                    <span class="event-title">Hike</span>
+                    <span class="event-info">
+                        <br/>
+                        <span class="event-time">Time: 6 pm - 7 pm</span>
+                        <br/>
+                        <span class="event-venue">Location: United States</span>
+                        <br/>
+                    </span>
+                </span>
+            </div>
+            <hr>
+            <div class="event-item">
+                <span class="event-date">
+                    <span class="event-day">17</span>
+                    <span class="event-month">Nov</span>
+                    <span class="event-day-name">Monday</span>
+                </span>
+                <span class="event-details">
+                    <span class="event-title">Orphanage</span>
+                    <span class="event-info">
+                        <br/>
+                        <span class="event-time">Time: 6 am - 8 pm</span>
+                        <br>
+                        <span class="event-venue">Location: United States</span>
+                        <br>
+                    </span>
+                </span>
+            </div>
+            <hr>
+            <div class="event-item">
+                <span class="event-date">
+                    <span class="event-day">14</span>
+                    <span class="event-month">Dec</span>
+                    <span class="event-day-name">Sunday</span>
+                </span>
+                <span class="event-details">
+                    <span class="event-title">Environmental Clean up</span>
+                    <span class="event-info">
+                        <br/>
+                        <span class="event-time">Time: 9 pm - 10 pm</span>
+                        <br/>
+                        <span class="event-venue">Location: United States</span>
+                        <br>
+                    </span>
+                </span>
+            </div>
+            <hr>
+            <div class="event-item">
+                <span class="event-date">
+                    <span class="event-day">01</span>
+                    <span class="event-month">May</span>
+                    <span class="event-day-name">Wednesday</span>
+                </span>
+                <span class="event-details">
+                    <span class="event-title">Farewell</span>
+                    <span class="event-info">
+                        <br/>
+                        <span class="event-time">Time: 6 pm - 7 pm</span>
+                        <br>
+                        <span class="event-venue">Location: United States</span>
+                        <br>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section  school-calendar-section">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-4">SCHOOL CALENDAR</h2>
+        <div class="row">
+            <div class="col-md-6">
+                    <thead>
+                        <tr>
+                            <th>First Sem</th>
+                        </br>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <br>
+                        <tr>
+                            <td>26.08.2024 : First Year Reporting</td>
+                        </br>
+                        </tr>
+                        <tr>
+                            <td>27.08.24-30.08.24 : First Year Orientation</td>
+                        </br>
+                        </tr>
+                        <tr>
+                            <td>02.09.24-22.11.24 : Teaching Weeks</td>
+                            <br/>
+                        </tr>
+                        <tr>
+                            <td>25.11.24-06.12.24 : Examinations</td>
+                        </br>
+                        </tr>
+                        <tr>
+                            <td>09.11.24-03.01.25 : Vacation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                    <thead>
+                        <tr>
+                            <th>Second Sem</th>
+                        </br>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January 13: First Day of Classes</td>
+                            <br/>
+                        </tr>
+                        <tr>
+                            <td>March 10-14: Spring Break</td>
+                            </br>
+                        </tr>
+                        <tr>
+                            <td>April 18: Good Friday (No Classes)</td>
+                        </br>
+                        </tr>
+                        <tr>
+                            <td>May 2: Last Day of Classes</td>
+                        </br>
+                        </tr>
+                        <tr>
+                            <td>May 5-9: Final Exams</td>
+                        </br>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="section section-light enquiries-section">
+    <div class="container">
+        <h2 class="fw-bold text-center">Email Enquiries</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    const countdownElement = document.getElementById('countdown');
+    const eventDate = new Date('2024-07-22T08:00:00').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        if (distance < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = "Event Started!";
+        }
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+</script>
+{% endblock %}

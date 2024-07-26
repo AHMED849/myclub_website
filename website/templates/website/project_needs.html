@@ -1,0 +1,58 @@
+{% extends 'website/base.html' %}
+{% block title %}Project Needs - Masjid Salaam{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Project Needs - Masjid Salaam</h1>
+    
+    <div class="chart-container">
+        <canvas id="fundingChart"></canvas>
+    </div>
+
+    <div class="needs">
+        <div class="need-item">
+            <h3>Construction Materials</h3>
+            <p>Cement, Bricks, Steel</p>
+        </div>
+        <div class="need-item">
+            <h3>Interior Furnishings</h3>
+            <p>Carpets, Paint, Lighting</p>
+        </div>
+        <div class="need-item">
+            <h3>Volunteer Roles</h3>
+            <p>Clean-Up, Decorating, Organizing</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script>
+    var ctx = document.getElementById('fundingChart').getContext('2d');
+    var fundingChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Raised', 'Goal'],
+            datasets: [{
+                data: [1000000, 10000000], 
+                backgroundColor: ['#4caf50', '#f44336']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            var label = context.label || '';
+                            var value = context.raw;
+                            return label + ': $' + value;
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}
